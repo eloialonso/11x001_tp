@@ -19,6 +19,10 @@
 
 ![](./images/resulting_screen.png)
 
+**Attention: veillez à stopper vos workspaces quand vous ne les utilisez pas!**
+![image](https://github.com/user-attachments/assets/382c055f-1c85-49ca-82b2-c1fb661a9fc5)
+
+
 ## Quelques raccourcis/commandes utiles
 
 - Dans l'éditeur de texte :
