@@ -1,4 +1,4 @@
-# Instructions pour bien commencer les TPs
+## Instructions pour bien commencer les TPs
 
 - Créez un compte [gitpod](https://www.gitpod.io/) (try for free, vous aurez normalement 50h par mois)
 - Créez un compte [GitHub](https://github.com/) (vous pouvez obtenir GitHub Pro avec l'Université)
@@ -11,6 +11,8 @@
 
 ![](./images/addon.png)
 
+## Chaque semaine
+
 - Vous pouvez ensuite accéder à l'éditeur de texte en cliquant sur ce bouton:
 
 ![](./images/open_gitpod_with_addon.png)
@@ -19,7 +21,13 @@
 
 ![](./images/resulting_screen.png)
 
-**Attention: veillez à stopper vos workspaces quand vous ne les utilisez pas!**
+- Et pour mettre à jour vos fichiers, vous pouvez tapez dans le terminal
+
+```
+git merge upstream/main main
+```
+
+- Et lorsque vous avez fini de travailler, **veillez à stopper vos workspaces quand vous ne les utilisez pas!**
 ![image](https://github.com/user-attachments/assets/382c055f-1c85-49ca-82b2-c1fb661a9fc5)
 
 
