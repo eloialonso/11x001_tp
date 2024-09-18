@@ -1,6 +1,4 @@
 import numpy as np
-import matplotlib.pyplot as plt
-
 
 A = [[1, 2, 3, 4]]  # 1 x 4
 B = [[1], [2], [3], [4]]    # 4 x 1
@@ -18,4 +16,4 @@ A_np = np.array(A)
 B_np = np.array(B)
 C_np = A_np @ B_np
 
-print(C)
+print(C_np)
