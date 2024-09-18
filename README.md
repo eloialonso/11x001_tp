@@ -1,7 +1,7 @@
 ## Instructions pour bien commencer les TPs
 
 - Créez un compte [gitpod](https://www.gitpod.io/) (try for free, vous aurez normalement 50h par mois)
-- Créez un compte [GitHub](https://github.com/) (vous pouvez obtenir GitHub Pro avec l'Université)
+- Créez un compte [GitHub](https://github.com/) et demandez [GitHub Pro](https://education.github.com/pack) avec l'Université. Si GitPod vous demande un compte linkedin, vous pouvez aussi en créer un.
 - Allez sur la [page GitHub](https://github.com/eloialonso/11x001_tp) des exercices si pas déjà fait, puis `forker` le `repository` comme indiqué comme suit:
 
 ![](./images/fork_1.png)
