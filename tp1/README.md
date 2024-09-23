@@ -5,15 +5,6 @@ Université de Genève, cours [11X001 Introduction à la Programmation des Algor
 
 ---
 
-## Instructions pour bien commencer
-
-1. Créer un compte sur replit : [https://replit.com/signup](https://replit.com/signup) 
-2. Aller sur la page des TD : [https://replit.com/@mlg-unige/](https://replit.com/@mlg-unige/)
-3. Cliquer sur le TD d'aujourd'hui : **[11X001] TD0**
-4. Cliquer sur le bouton **Fork**. Cela va créer, dans votre espace personnel, une copie du projet sur laquelle vous aurez les droits d'édition. 
-5. La colonne de gauche contient les fichiers du projet, celle du milieu est un éditeur de texte, et celle de droite affiche les sorties. 
-6. Pour le moment, dans la colonne de gauche, cliquer sur `README.md`. Dans la colonne de droite, aller dans l'onglet `Markdown` pour visualiser correctement le fichier.
-
 
 ## Consignes générales (pour tous les TD)
 
