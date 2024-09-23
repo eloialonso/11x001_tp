@@ -1,7 +1,17 @@
 ## Instructions pour bien commencer les TPs
 
-### GitPod
+### Option locale (recommandée)
 
+
+- Si vous êtes sur Windows, commencez par installer [WSL avec Ubuntu](https://documentation.ubuntu.com/wsl/en/latest/guides/install-ubuntu-wsl2/)
+- On vous recommande VSCode comme éditeur de texte, clang comme compilateur C, et miniconda pour gérer votre environnement Python.
+
+
+### Option cloud - GitPod
+
+<details>
+    <summary>Détails d'installation</summary>
+    
 - Créez un compte [gitpod](https://www.gitpod.io/) (try for free, vous aurez normalement 50h par mois)
 - Créez un compte [GitHub](https://github.com/) et si GitPod vous demande un compte linkedin, vous pouvez aussi en créer un.
 - Allez sur la [page GitHub](https://github.com/eloialonso/11x001_tp) des exercices si pas déjà fait, puis `forker` le `repository` comme indiqué comme suit:
@@ -14,7 +24,7 @@
 ![](./images/addon.png)
 
 
-## Chaque semaine
+#### Chaque semaine
 
 - Vous pouvez ensuite accéder à l'éditeur de texte en cliquant sur ce bouton:
 
@@ -24,26 +34,17 @@
 
 ![](./images/resulting_screen.png)
 
-- Et pour mettre à jour vos fichiers, vous pouvez tapez dans le terminal
-
-```
-git merge upstream/main main
-```
-
 - Et lorsque vous avez fini de travailler, **veillez à stopper vos workspaces quand vous ne les utilisez pas!**
 ![image](https://github.com/user-attachments/assets/382c055f-1c85-49ca-82b2-c1fb661a9fc5)
 
+</details>
 
-## Quelques raccourcis/commandes utiles
+## Quelques commandes utiles dans le terminal
 
-- Dans l'éditeur de texte :
-    - Toggle le terminal : ctrl + j
-    - Toggle l'explorer (à gauche): ctrl + b
-- Dans le terminal :
-    - Se déplacer dans le filesystem : `cd <chemin>`
-    - Revenir un répertoire au dessus : `cd ..`
-    - Voir les fichiers présents dans le répertoire courant : `ls` ou `ll`
-    - **Lancer un code C** :
-        - Compiler votre code source avec `clang <nom>.c -o <nom_executable>`
-        - Exécuter avec `./<nom_executable>`
-    - **Lancer un code Python** : `python <nom>.py`
+- Se déplacer dans le filesystem : `cd <chemin>`
+- Revenir un répertoire au dessus : `cd ..`
+- Voir les fichiers présents dans le répertoire courant : `ls` ou `ll`
+- **Lancer un code C** :
+    - Compiler votre code source avec `clang <nom>.c -o <nom_executable>`
+    - Exécuter avec `./<nom_executable>`
+- **Lancer un code Python** : `python <nom>.py`
