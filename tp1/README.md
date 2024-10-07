@@ -97,7 +97,7 @@ printf("Racine de 2 vaut environ %f", 1.41421); // Affiche "Racine de 2 vaut env
 
 **TODO** : Calculer et afficher le périmètre et l'aire d'un cercle.  
 
-**Astuce** : L'astuce de l'exercice 2 est utile ici aussi.
+**Astuce** : L'astuce de l'exercice 4 est utile ici aussi.
 
 **Remarques** :
 
@@ -124,7 +124,7 @@ scanf("%f", &radius);  // lecture de la valeur entrée par l'utilisateur
 **TODO** : Calculer son âge en jours et stocker le résultat dans la variable `age_in_day`. Pour faire simple, on ignore les années bissextiles et on considère qu'un mois fait toujours 30 jours, et donc qu'un an fait 360 jours.
 
 **Remarque** : 
-- Similairement à l'exercice 3, on utilise la fonction `scanf` pour demander la date de naissance et la date du jour à l'utilisateur lors de l'exécution. **/!\ Partie déjà implémenté pour vous**. À nouveau, nous vous conseillons d'observer / de jouer avec la syntaxe pour vous familiariser avec l'utilisation de `scanf` :
+- Similairement à l'exercice 5, on utilise la fonction `scanf` pour demander la date de naissance et la date du jour à l'utilisateur lors de l'exécution. **/!\ Partie déjà implémenté pour vous**. À nouveau, nous vous conseillons d'observer / de jouer avec la syntaxe pour vous familiariser avec l'utilisation de `scanf` :
 
 ```c
 int birth_year, birth_month, birth_day;  // Déclaration des variables 
@@ -155,7 +155,7 @@ scanf("%d/%d/%d", &birth_day, &birth_month, &birth_year);  // Lecture de la date
 
 ```c 
 int a = 7, b = 2;
-float c, d;  
+float c;  
 
 c = a / b; // Ne modifier que cette ligne
 
@@ -230,7 +230,7 @@ Ce phénomène s'appelle un **integer overflow** : quand un nombre est trop gran
 
 ### Mise en pratique
 
-- **TODO**: Observer / comprendre / jouer avec le code fourni dans la fonction `exercice7`. 
+- **TODO**: Observer / comprendre / jouer avec le code fourni dans la fonction `exercice9`. 
 
 **Remarque** : On utilise le type `unsigned char` car il permet de stocker des nombres entiers sur 8 bits, comme dans l'explication précédente.
 

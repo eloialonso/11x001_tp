@@ -111,7 +111,7 @@ void exercice8(void) {
     printf("\n\nEXERCICE 8\n\n");
 
     int a = 7, b = 2;
-    float c, d;  
+    float c;  
     
     /******************** Votre code ci-dessous ********************/
 
