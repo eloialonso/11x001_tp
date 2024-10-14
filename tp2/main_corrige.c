@@ -200,6 +200,24 @@ void exercice5(void) {
     printf("\n\nEXERCICE 5\n\n");
     
     /******************** Votre code ci-dessous ********************/
+    struct Etudiant {
+        char prenom[30];
+        int note;
+    };
+
+    struct Etudiant mon_etudiant;
+
+    printf("Renseigner le nom de l'étudiant : ");
+    scanf("%s", mon_etudiant.prenom);
+    printf("Renseigner la note de l'étudiant : ");
+    scanf("%d", &mon_etudiant.note);
+
+    if (mon_etudiant.note >= 4) {
+        printf("%s a réussi IPA.", mon_etudiant.prenom);
+    }
+    else {
+        printf("%s a échoué IPA.", mon_etudiant.prenom);
+    }
     /******************** Votre code ci-dessus *********************/
 
     return;
@@ -210,6 +228,29 @@ void exercice5_bis(void) {
     printf("\n\nEXERCICE 5 BIS\n\n");
     
     /******************** Votre code ci-dessous ********************/
+    struct Etudiant {
+        char prenom[30];
+        int note;
+    };
+
+    struct Etudiant etudiants[3];
+
+    for (int i = 0; i < 3; i++) {
+        printf("Renseigner le nom de l'étudiant %d : ", i);
+        scanf("%s", etudiants[i].prenom);
+        printf("Renseigner la note de l'étudiant %d : ", i);
+        scanf("%d", &etudiants[i].note);
+
+    }
+
+    for (int i = 0; i < 3; i++) {
+        if (etudiants[i].note >= 4) {
+            printf("%s a réussi IPA.\n", etudiants[i].prenom);
+        }
+        else {
+            printf("%s a échoué IPA.\n", etudiants[i].prenom);
+        }
+    }
     /******************** Votre code ci-dessus *********************/
 
     return;
@@ -220,6 +261,15 @@ void exercice5_ter(void) {
     printf("\n\nEXERCICE 5 TER\n\n");
     
     /******************** Votre code ci-dessous ********************/
+    struct Etudiant {
+        char prenom[30];
+        int note;
+    };
+
+    struct Etudiant etudiants[3];
+
+    int num_elem = sizeof(etudiants) / sizeof(etudiants[0]);
+    printf("%d éléments dans le tableau.", num_elem);
     /******************** Votre code ci-dessus *********************/
 }
 
