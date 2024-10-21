@@ -26,11 +26,16 @@ int puissance(int nombre, int exposant) {
 
 int restreindre_intervalle_pure(int x, int min, int max) {
     /******************** Votre code ci-dessous ********************/
+    if (x < min) return min;
+    if (x > max) return max;
+    return x; 
     /******************** Votre code ci-dessus ********************/
 }
 
 void restreindre_intervalle_bord(int *x, int min, int max) {
     /******************** Votre code ci-dessous ********************/
+    if (*x < min) *x = min;
+    if (*x > max) *x = max; 
     /******************** Votre code ci-dessus ********************/
 }
 
