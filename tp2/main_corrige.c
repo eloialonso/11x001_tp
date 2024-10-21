@@ -278,6 +278,47 @@ void exercice6(void) {
     printf("\n\nEXERCICE 6\n\n");
     
     /******************** Votre code ci-dessous ********************/
+    struct Passager {
+        char prenom[30];
+        int siege;
+    };
+
+    struct Vol {
+        char depart[30];
+        char arrivee[30];
+        int duree;
+        struct Passager passagers[2];
+    };
+    
+    struct Vol vols[2];
+
+    for (int i = 0; i < 2; i++) {
+
+        struct Vol vol;
+        printf("Vol %d, départ : ", i);
+        scanf("%s", vol.depart);
+        printf("Vol %d, arrivée : ", i);
+        scanf("%s", vol.arrivee);
+        printf("Vol %d, durée : ", i);
+        scanf("%d", &vol.duree);
+
+        for (int j = 0; j < 2; j++) { 
+            struct Passager passager;
+            printf("Vol %d, nom du passager %d : ", i, j);
+            scanf("%s", passager.prenom);
+            printf("Vol %d, siège du passager %d : ", i, j);
+            scanf("%d", &passager.siege);
+            vol.passagers[j] = passager;
+        }
+        vols[i] = vol;
+    }
+
+    for (int i = 0; i < 2; i++) {
+        printf("Vol au départ de %s et à destination de %s d'une durée de %d heures, nous appelons les passagers : \n", vols[i].depart, vols[i].arrivee, vols[i].duree);
+        for (int j = 0; j < 2; j++) {
+            printf("- %s siège %d. \n", vols[i].passagers[j].prenom, vols[i].passagers[j].siege);
+        }
+    }
     /******************** Votre code ci-dessus *********************/
 
     return;
@@ -288,6 +329,32 @@ void exercice7(void) {
     printf("\n\nEXERCICE 7\n\n");
     
     /******************** Votre code ci-dessous ********************/
+    for(int i = 0; i < 10; i++) {
+        for(int j = 0; j < 10-i; j++) {
+            printf(" ");
+        }  
+        for(int j = 0; j < 2*i+1; j++) {
+            printf("*");
+        }
+        printf("\n");
+    }
+
+    for(int i = 0; i < 10; i++) {
+        for(int j = 0; j < 10-i; j++) {
+            printf(" ");
+        }  
+        for(int j = 0; j < 2*i+1; j++) {
+            printf("*");
+        }
+        printf("\n");
+    }
+
+    for(int i = 0; i < 6; i++) {
+        for (int j = 0; j < 9; j++) {
+            printf(" ");
+        }
+        printf("***\n");
+    }
     /******************** Votre code ci-dessus *********************/
 
     return;
@@ -298,6 +365,39 @@ void exercice7_bis(void) {
     printf("\n\nEXERCICE 7 BIS\n\n");
     
     /******************** Votre code ci-dessous ********************/
+    int dimensions[3];
+
+    for (int i = 0; i < 3; i++) {
+        printf("Renseigner le nombre de lignes de la forme %d : ", i);
+        scanf("%d", &dimensions[i]);
+    }
+    
+    for(int i = 0; i < dimensions[0]; i++) {
+        for(int j = 0; j < dimensions[0]-i; j++) {
+            printf(" ");
+        }  
+        for(int j = 0; j < 2*i+1; j++) {
+            printf("*");
+        }
+        printf("\n");
+    }
+
+    for(int i = 0; i < dimensions[1]; i++) {
+        for(int j = 0; j < dimensions[0]-i; j++) {
+            printf(" ");
+        }  
+        for(int j = 0; j < 2*i+1; j++) {
+            printf("*");
+        }
+        printf("\n");
+    }
+
+    for(int i = 0; i < dimensions[2]; i++) {
+        for (int j = 0; j < dimensions[0]-1; j++) {
+            printf(" ");
+        }
+        printf("***\n");
+    }
     /******************** Votre code ci-dessus *********************/
 
     return;
