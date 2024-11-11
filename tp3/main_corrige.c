@@ -41,7 +41,24 @@ void restreindre_intervalle_bord(int *x, int min, int max) {
 
 // EXERCICE 5
 
+void echange(int* a, int* b) {
+    int tmp = *a;
+    *a = *b;
+    *b = tmp;
+}
+
 // EXERCICE 6
+
+int factorielle(int n) {
+    if (n <= 1) {
+        return 1;
+    }
+    return n * factorielle(n - 1);
+}
+
+int coefficient_binomial(int k, int n) {
+    return factorielle(n) / (factorielle(k) * factorielle(n - k));
+}
 
 // EXERCICE 7
 
@@ -80,19 +97,72 @@ void hanoi(int nb_disques, char nom_tour_depart, char nom_tour_arrivee, char nom
     }
 
     // TODO : commenter (ou supprimer) la ligne suivante
-    hanoi_idiot(nb_disques, nom_tour_depart, nom_tour_arrivee, nom_tour_auxiliaire);
+    //hanoi_idiot(nb_disques, nom_tour_depart, nom_tour_arrivee, nom_tour_auxiliaire);
 
     /******************** Votre code ci-dessous ********************/
     
+    if (nb_disques == 1) {
+        afficher_instruction_hanoi(nom_tour_depart, nom_tour_arrivee);
+        return;
+    }
+    hanoi(nb_disques - 1, nom_tour_depart, nom_tour_auxiliaire, nom_tour_arrivee);
+    afficher_instruction_hanoi(nom_tour_depart, nom_tour_arrivee);
+    hanoi(nb_disques - 1, nom_tour_auxiliaire, nom_tour_arrivee, nom_tour_depart);
     
     /******************** Votre code ci-dessus *********************/
 }
 
 // EXERCICE 8
 
+float initialiser_heron(float a) {
+    /* Retourne la partie entière de la racine carrée de 'nombre' */ 
+    float x = 0;
+    while (x * x < a) {
+        x += 1;
+    }
+    return x - 1;
+}
+
+float valeur_absolue(float x) {
+    if (x < 0) return -x;
+    return x;
+}
+
+float racine_heron(float a, float precision) {
+    float x = initialiser_heron(a);
+    while (valeur_absolue(a - x * x) > precision) {
+        x = 0.5 * (x + a / x);
+    }
+    return x;
+}
 
 // EXERCICE 9 
 
+int point_est_dans_cercle(float x, float y, float rayon) {
+    float norme = x * x + y * y;
+    if (norme < rayon) {
+        return 1;
+    } else {
+        return 0;
+    }
+}
+
+float approximer_pi(int nb_points_par_axe) {
+    int nb_points_dans_cercle_unite = 0;
+    int nb_points_total = 0;
+    float x, y;
+    for (int i = 0; i < nb_points_par_axe; i++) {
+        for (int j = 0; j < nb_points_par_axe; j++) {
+            x = i / (float) nb_points_par_axe;
+            y = j / (float) nb_points_par_axe;
+            nb_points_total += 1;
+            if (point_est_dans_cercle(x, y, 1)) {
+                nb_points_dans_cercle_unite += 1;
+            }
+        }
+    }
+    return 4 * (float) nb_points_dans_cercle_unite / nb_points_total;
+}
 
 /****************************/
 /* Vos fonctions ci-dessus **/
@@ -199,6 +269,8 @@ void exercice5(void) {
     
     /******************** Votre code ci-dessous ********************/
 
+    echange(&a, &b);
+    
     /******************** Votre code ci-dessus *********************/
 
     printf("Après l'échange, a = %d et b = %d \n", a, b);
@@ -220,6 +292,10 @@ void exercice6(void) {
 
     /******************** Votre code ci-dessous ********************/
     
+    fact_k = factorielle(k);
+    fact_n = factorielle(n);
+    k_parmi_n = coefficient_binomial(k, n);
+
     /******************** Votre code ci-dessus *********************/
 
     printf("%d! = %d\n", k, fact_k);
@@ -258,7 +334,7 @@ void exercice8(void) {
     scanf("%f", &precision);
     
     // TODO : Décommenter la ligne suivante une fois que la fonction ,'racine_heron' est implémentée
-    // x = racine_heron(a, precision);
+    x = racine_heron(a, precision);
 
     printf("Racine carrée de %f = %f\n", a, x);
 
@@ -277,6 +353,8 @@ void exercice9(void) {
 
     /******************** Votre code ci-dessous ********************/
         
+    printf("Pi vaut environ %f\n", approximer_pi(nb_points_par_axe));
+
     /******************** Votre code ci-dessus *********************/
 
     return;
