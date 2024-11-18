@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-#include "algorithmes_td6.c"
+#include "algorithmes_td5.c"
 
 /****************************/
 /* Vos fonctions ci-dessous */ 

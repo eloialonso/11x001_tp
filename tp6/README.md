@@ -32,6 +32,11 @@ car le compilateur va vérifier qu'elles sont bien déclarées avant leur appel.
 
 ---
 
+**Remarque** : Copier également le fichier `algorithmes_td5.c`.
+
+---
+
+
 ## Exercice 1 - Complexité
 
 **TODO** : 
