@@ -14,7 +14,7 @@ entier levenshtein(str a, str b):
     Pour i de 1 à len(a) + 1:
         Pour j de 1 à len(b) + 1:
             Si 
-                a[i - 1] == b[i - 1]
+                a[i - 1] == b[j - 1]
             Alors 
                 D[i][j] = D[i - 1][j - 1]
             Sinon 
